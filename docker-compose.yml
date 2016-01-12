@@ -1,10 +1,10 @@
 wordpress:
-  image: wordpress
+  image: gravityrail/wordpress
   links:
     - dbms:mysql
   ports:
-    - 8080:80
+    - 8081:80
 dbms:
-  image: mysql
+  image: mariadb:latest
   environment:
-    - MYSQL_ROOT_PASSWORD=password
+    MYSQL_ROOT_PASSWORD: password
